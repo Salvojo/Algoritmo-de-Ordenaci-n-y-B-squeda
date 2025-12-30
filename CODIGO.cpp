@@ -485,28 +485,28 @@ void busqueda_secuencial_recursiva(Concepto* p, int contador){
     system("cls");
     
     busqueda_sucu_aux(p, contador,0,palabra_buscar);
-    //omar es cabro??
+   
 }
 
-void busqueda_sucu_aux(contepto *p, int contador,int a, string buscar){
+void busqueda_sucu_aux(contepto *p, int contador,int x, string buscar){
 
     if(a== contador){    
         diseno_iterativa_no_encontrado();
         return; 
     }
 
-    string actual_mayuscula == mayusculas(p[a].termino);
+    string actual_mayuscula == mayusculas(p[x].termino);
     
     if(actual_mayuscula==buscar){
     diseno_iterativa_encontrado();
-    gotoxy(48,7); cout<<p[a].termino;
+    gotoxy(48,7); cout<<p[x].termino;
     cambio_color(9);
-    gotoxy(45,11); cout<<p[a].definicion;
+    gotoxy(45,11); cout<<p[x].definicion;
     cambio_color(7);
     getch();
     return;
     }
-    busqueda_sucu_aux(p,contador,a+1,buscar);
+    busqueda_sucu_aux(p,contador,x+1,buscar);
 
 }
 
@@ -912,4 +912,6 @@ void mostrarcharm(){
     system("cls");
     activarUTF();
 }
+
+
 
